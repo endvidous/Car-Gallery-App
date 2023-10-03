@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import carsData from '../data/carsData.json';
+import carsData from '../Data/carsData.json';
 import CarCard from './CarCard';
 import Pagination from './Pagination';
 import '../Css/index.css';

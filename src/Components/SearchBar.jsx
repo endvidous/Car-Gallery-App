@@ -5,18 +5,13 @@ const SearchBar = ({ onSearch }) => {
 
   return (
     <div className="search-bar-main">
-      
       <input
         type="text"
         className="search-input"
-        placeholder="Search by Car Name"
+        placeholder="Enter Car Name"
         onChange={onSearch}
       />
-
-      <button className="search-button" type="button">
-        Search
-      </button>
-
+      <img  src='/svg/search.svg' className='search-button'/>
     </div>
   );
 };

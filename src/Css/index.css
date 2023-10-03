@@ -11,28 +11,38 @@ body{
 .header{
   padding: none;
   margin: none;
-}
-.search-bar-main{
-  background-color: #4a4a4a;
-  display: flex;
   width: auto;
   height: auto;
-
-  margin: 0;
-  padding: 0.75rem;
+  background-color: #4a4a4a;
   box-shadow: 0 3px 10px 3px grey;
 }
-
-.search-bar-main > button{
-  margin-left: 10px  ;
-  border: none;
-  border-radius: 5px;
+.search-bar-main{
+  display: flex;
+  
+  padding: 1rem;
+  margin: 0 5rem;
 }
 
-.search-bar-main > input{
-  padding:10px;
+.search-input{
+  font-size: 1.5rem;
+  color: black;
+
+  padding: 0.5rem;
+
   border-radius: 5px;
   border: none;
+}
+
+.search-input:active, .search-input:focus{
+  outline: none;
+}
+
+
+
+.search-button{
+  width: 3rem;
+  height: auto;
+  margin: 0 1rem;
 }
 
 /*Pagination*/
