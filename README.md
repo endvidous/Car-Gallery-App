@@ -1,4 +1,4 @@
-# React + Vite
+# React + Vite Car Gallery App Progect
 
 This app was made using react and jsx. It includes the most common routing method and pagination. It shows
 the implementation between pages, and data that are in the source folder itself. 
