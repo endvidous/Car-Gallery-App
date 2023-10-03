@@ -11,7 +11,7 @@ const SearchBar = ({ onSearch }) => {
         placeholder="Enter Car Name"
         onChange={onSearch}
       />
-      <img  src='./svg/search.svg' className='search-button'/>
+      <img  src='../svg/search.svg' className='search-button'/>
     </div>
   );
 };
