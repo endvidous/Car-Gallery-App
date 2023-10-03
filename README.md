@@ -1,8 +1,6 @@
-# React + Vite
+# React + Vite Car Gallery App Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This app was made using react and jsx. It includes the most common routing method and pagination. It shows
+the implementation between pages, and data that are in the source folder itself. 
+It is a beginner app so it doesn't include much functionality but it works very well for the amount of time 
+invested on the project
