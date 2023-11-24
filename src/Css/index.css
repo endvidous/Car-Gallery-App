@@ -1,6 +1,5 @@
 @import url('https://rsms.me/inter/inter.css');
 
-
 body{
   margin: 0;
   padding: 0;
@@ -37,8 +36,6 @@ body{
   outline: none;
 }
 
-
-
 .search-button{
   width: 3rem;
   height: auto;
@@ -49,7 +46,7 @@ body{
 .navigation{
   display: flex;
   flex-direction: row;
-  align-items:center;
+  align-items: center;
   justify-content:flex-end;
   background-color: #427661;
   width: auto;
@@ -60,8 +57,6 @@ body{
   border: none;
   box-shadow: 0 3px 10px 4px gray;
   border-radius: 5px;
-
-  
 }
 
 .pagination{
@@ -70,27 +65,38 @@ body{
   list-style-type: none;
 }
 
-.arrow, .page-link {
+.arrow,
+.page-link {
   color: #000000;
-	width: 2rem;
-	height: 2rem;
+  width: 2rem;
+  height: 2rem;
   padding: 0.25rem;
-	margin: 0 0.25rem;
+  margin: 0 0.25rem;
   font-size: 1rem;
   background-color: #ace6ce;
-	display: inline-flex;
-	flex-shrink: 0;
-	justify-content: center;
-	align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   text-decoration: none;
 }
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .arrow,
+  .page-link {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+
 
 .arrow:hover, .page-link:hover{
   background-color: rgb(101, 185, 234);
   cursor: pointer;
 }
-
 
 .arrow:visited, .page-link:visited{
   text-decoration: none;
@@ -141,12 +147,12 @@ body{
   margin: 1rem 0.25rem;
 }
 
-
 /*Car List*/
 .CarList{
   padding: none;
   margin: none;
 }
+
 .cars-container{
   display: flex;
   flex-flow: row wrap;
