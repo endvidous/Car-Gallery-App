@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../css/index.css";
+import "../Css/index.css";
 
 const CarCard = ({ car }) => {
   const [imageExists, setImageExists] = useState(true);
