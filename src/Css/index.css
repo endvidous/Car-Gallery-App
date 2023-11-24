@@ -8,26 +8,22 @@ body{
 
 /*Header & Search Bar*/
 .header{
-  padding: none;
-  margin: none;
-  width: auto;
-  height: auto;
+  padding: 1rem;
   background-color: #4a4a4a;
   box-shadow: 0 3px 10px 3px grey;
 }
+
 .search-bar-main{
   display: flex;
-  
+  flex-direction: row;
+  align-items: center;
   padding: 1rem;
-  margin: 0 5rem;
+  margin: 0;
 }
 
 .search-input{
   font-size: 1.5rem;
-  color: black;
-
   padding: 0.5rem;
-
   border-radius: 5px;
   border: none;
 }
@@ -37,24 +33,25 @@ body{
 }
 
 .search-button{
-  width: 3rem;
+  width: 2.8rem;
   height: auto;
-  margin: 0 1rem;
+  padding: 0.5rem;
+  margin-left: 1rem;
 }
 
 /*Pagination*/
 .navigation{
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content:flex-end;
-  background-color: #427661;
+  align-items:center;
+  justify-content: flex-end;
   width: auto;
-
+  
   margin: none;
   padding: 0 0.75rem;
-
+  
   border: none;
+  background-color: #427661;
   box-shadow: 0 3px 10px 4px gray;
   border-radius: 5px;
 }
@@ -88,6 +85,28 @@ body{
     width: 1.5rem;
     height: 1.5rem;
     font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .header,
+  .search-bar-main,
+  .navigation,
+  .pagination,
+  .row-cars {
+    margin: 0 5%;
+  }
+
+  .arrow,
+  .page-link {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  .image-car {
+    max-width: 100%; /* Adjust as needed */
+    height: auto;
   }
 }
 
