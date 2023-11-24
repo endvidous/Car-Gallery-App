@@ -8,15 +8,15 @@ const CarCard = ({ car }) => {
     const img = new Image();
     img.src = car.Image;
 
-    console.log("Attempting to load image", car.Image);
+    // console.log("Attempting to load image", car.Image);
 
     img.onload = () => {
-      console.log("Image loaded successfully:", car.Image);
+      // console.log("Image loaded successfully:", car.Image);
       setImageExists(true);
     };
 
     img.onerror = () => {
-      console.error("Error loading image:", car.Image);
+      // console.error("Error loading image:", car.Image);
       setImageExists(false);
     };
   }, [car.Image]);
