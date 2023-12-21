@@ -5,6 +5,7 @@ import Pagination from './Pagination';
 import '../Css/index.css';
 import SearchBar from './SearchBar';
 import { useState } from 'react';
+import Fuse from 'fuse.js';
 
 
 const CarList = () => {
@@ -16,16 +17,27 @@ const CarList = () => {
 
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredCars, setFilteredCars] = useState(carsData.cars);
+
+  //fuse options for fuzzy search
+  const fuseOptions = {
+    keys: ['CarName', 'Model', 'Brand', 'Year'],
+    includeScore: true,
+    shouldSort: true,
+    threshold: 1,
+  };
+
+  const fuse = new Fuse(carsData.cars, fuseOptions);
   
   // Handle search input change
   const handleSearch = (e) => {
     const newSearchTerm = e.target.value;
     setSearchTerm(newSearchTerm);
 
-    // Filter the cars based on the new search term
-    const newFilteredCars = carsData.cars.filter((car) =>
-      car.CarName.toLowerCase().includes(newSearchTerm.toLowerCase())
-    );
+  //find the filtered cars 
+  const newFilteredCars = newSearchTerm === '' ? 
+    carsData.cars : 
+    fuse.search(newSearchTerm.toLowerCase().replaceAll(" ","")).map((result) => result.item);
+    
 
     // Update the filteredCars state
     setFilteredCars(newFilteredCars);

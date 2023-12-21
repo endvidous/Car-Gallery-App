@@ -1,8 +1,10 @@
 @import url('https://rsms.me/inter/inter.css');
 
-body{
+body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
   background-color: darkgray;
 }
 
@@ -17,9 +19,11 @@ body{
 }
 .search-bar-main{
   display: flex;
-  
+  align-items: center;
+  justify-content: flex-start;  
+  width: 100%;
   padding: 1rem;
-  margin: 0 5rem;
+  margin: 0;
 }
 
 .search-input{
@@ -32,14 +36,18 @@ body{
   border: none;
 }
 
-.search-input:active, .search-input:focus{
-  outline: none;
+.search-input:active, .search-input:focus, .search-input:hover{
+  outline: 2px solid black;
 }
 
 .search-button{
-  width: 3rem;
+  width: 2rem;
   height: auto;
-  margin: 0 1rem;
+  margin-inline: 0.8rem;
+}
+
+.search-button:hover{
+  transform:scale(120%);
 }
 
 /*Pagination*/
@@ -149,8 +157,9 @@ body{
 
 /*Car List*/
 .CarList{
-  padding: none;
-  margin: none;
+  padding: 0;
+  margin: 0;
+  width: clamp(29.33vh, 100%, 100%)
 }
 
 .cars-container{
@@ -158,6 +167,7 @@ body{
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .row-cars{
