@@ -46,7 +46,7 @@ const CarCard = ({ car }) => {
 
   const getAbsolutePath = (relativePath, currentPath) => {
     // Assuming your images are in the public folder
-    return `${currentPath.replace(/\/page\/\d+/, '/')}${relativePath.replace(/^\./, '').replace('./public', '')}`;
+    return `${currentPath.replace(/\/page\/\d+/, '/')}${relativePath.replaceAll('./public', '')}`;
   };
 
   const imageSrc = imageExists
