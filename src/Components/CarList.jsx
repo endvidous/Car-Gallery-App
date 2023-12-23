@@ -47,11 +47,9 @@ const CarList = () => {
   const totalPages = Math.ceil(totalCars / carsPerPage);
 
   return (
-    <div className='CarList'>
-      <div className="header">
-        <SearchBar onSearch={handleSearch} />
-      </div>
-
+    <div className='CarList'> 
+      <SearchBar onSearch={handleSearch} />
+      
       {searchTerm === '' ? (
         <>
           <div className="cars-container">

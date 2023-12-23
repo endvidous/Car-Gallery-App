@@ -1,170 +1,21 @@
-@import url('https://rsms.me/inter/inter.css');
+/*Body */
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  background-color: darkgray;
-}
-
-#root{
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-
-/*Header & Search Bar*/
-.header{
-  padding: none;
-  margin: none;
   width: auto;
   height: auto;
-  background-color: #4a4a4a;
-  box-shadow: 0 3px 10px 3px grey;
-}
-.search-bar-main{
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;  
-  width: 100%;
-  padding: 1rem;
-  margin: 0;
-}
-
-.search-input{
-  font-size: 1.5rem;
-  color: black;
-
-  padding: 0.5rem;
-
-  border-radius: 5px;
-  border: none;
-}
-
-.search-input:active, .search-input:focus, .search-input:hover{
-  outline: 2px solid black;
-}
-
-.search-button{
-  width: 2rem;
-  height: auto;
-  margin-inline: 0.8rem;
-}
-
-.search-button:hover{
-  transform:scale(120%);
-}
-
-/*Pagination*/
-.navigation{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content:flex-end;
-  background-color: #427661;
-  width: auto;
-
-  margin: none;
-  padding: 0 0.75rem;
-
-  border: none;
-  box-shadow: 0 3px 10px 4px gray;
-  border-radius: 5px;
-}
-
-.pagination{
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-}
-
-.arrow,
-.page-link {
-  color: #000000;
-  width: 2rem;
-  height: 2rem;
-  padding: 0.25rem;
-  margin: 0 0.25rem;
-  font-size: 1rem;
-  background-color: #ace6ce;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  text-decoration: none;
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-  .arrow,
-  .page-link {
-    width: 1.5rem;
-    height: 1.5rem;
-    font-size: 0.8rem;
-  }
-}
-
-
-
-.arrow:hover, .page-link:hover{
-  background-color: rgb(101, 185, 234);
-  cursor: pointer;
-}
-
-.arrow:visited, .page-link:visited{
-  text-decoration: none;
-  color: black;
-}
-
-/*Car Card*/
-.carCard{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: stretch;
-  
-  border-radius: 1.15rem;;
-  
-  width: auto;
-  height: fit-content;
-  box-shadow: 0 3px 10px 3px grey;
-  padding: none;
-  margin: 1rem;
-}
-
-.image-car{
-  max-width: 20rem;
-  min-width: 20rem;
-  max-height: 25rem;
-  min-height: 25rem;
-  object-fit: cover;
-  overflow: hidden;
-  border-radius: 1.15rem;
-}
-
-.details{
-  display: flex;
-  position: absolute;
-  bottom: 0rem;
-  flex-direction: row;
-  justify-content: center;
-  border-radius: 0 0 1.15rem 1.15rem;
-  width: 100%;
-  background-color: rgba(129, 127, 127, 50%);
-}
-
-.details h3, h4{
-  font-size: 1.5rem;
-  opacity: 100%;
-  margin: 1rem 0.25rem;
+  overflow-x: hidden;
 }
 
 /*Car List*/
 .CarList{
-  padding: 0;
-  margin: 0;
-  width: clamp(29.33vh, 99%, 100%)
+  background-color: #545863;
+  max-width: 100%;
+  min-width: 20%;
 }
 
 .cars-container{
@@ -179,6 +30,219 @@ body {
   display: flex;
   flex-direction: row;
   flex-basis: 30%;
+  justify-content:space-evenly;
+}
+
+/*Header*/
+.search-bar-main{
+  position : sticky;
+  top: 0;
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+
+  padding: 1rem;
+  width: auto;
+  height: auto;
+
+  background-color: #A2AEBB;
+  outline: 2px solid #383a3f;
+}
+
+.search-input{
+  font-size: 1.5rem;
+  color: black;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.search-input:active, 
+.search-input:focus, 
+.search-input:hover{
+  outline: 2px solid black;
+}
+
+/*Pagination*/
+.navigation{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:center;
+  background-color: #A2AEBB;
+  
+  padding-inline-end: 0.75rem;
+
+  outline: 2px solid #383a3f;
+  border: none;
+}
+
+.pagination{
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+.page-item{
+  display: flex;
   justify-content: center;
-  align-items:flex-end;
+  align-items: center;
+  text-decoration: none;
+
+  width: 3rem;
+  height: 3rem;
+  
+  padding: 0.25rem;
+  margin-inline: 0.25rem;
+  font-size: 1rem;
+  border-radius: 50%;
+  background-color: #DFE0E2;
+
+}
+
+.page-item.active{
+  background-color: aqua;
+}
+
+.page-item:hover{
+  background-color: rgb(173, 255, 255);
+}
+
+.arrow,
+.page-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none; 
+  width: 3rem;
+  height: 3rem;
+}
+
+.arrow:hover, .page-link:hover{
+  cursor: pointer;
+}
+
+/*Car Card*/
+.carCard{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.15rem;
+  margin: 1rem;
+}
+
+.image-car{
+  max-width: 20rem;
+  min-width: 20rem;
+  max-height: 25rem;
+  min-height: 25rem;
+  object-fit: cover;
+  border-radius: 1.15rem;
+}
+
+.details{
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  flex-direction: row;
+  justify-content: center;
+  border-bottom-left-radius: 1.15rem;
+  border-bottom-right-radius: 1.15rem;
+  width: 100%;
+  background-color: rgb(162, 174, 187,0.5);
+}
+
+.details h3, h4{
+  font-size: 1.5rem;
+  opacity: 100%;
+  margin: 1rem 0.25rem;
+}
+
+/* Media query for different screens */
+
+@media (max-width: 325px ) {
+  .image-car{
+    max-width: 17rem;
+    min-width: 17rem;
+    max-height: 25rem;
+    min-height: 25rem;
+    object-fit: cover;
+    border-radius: 1.15rem;
+  }
+
+  .details h3, h4{
+    font-size: 1.2rem;
+    opacity: 100%;
+    margin: 1rem;
+  }
+
+  .search-bar-main{
+    justify-content: center;
+  }
+
+  .search-input{
+    font-size: 1.4rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .CarList{
+    overflow-x: hidden;
+  }
+
+  .pagination{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+  }
+  
+  .page-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.25rem;
+    margin-inline: 0.25rem;
+    font-size: 1rem;
+    border-radius: 50%;
+    background-color: #DFE0E2;
+  
+  }
+   
+  .arrow,
+  .page-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; 
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .search-bar-main{
+    justify-content: center;
+  }
+
+  .search-input{
+    text-align: center;
+  }
+}
+
+
+@media (min-width: 2560px){
+  .CarList{
+    overflow: hidden;
+    min-height: 100vh;
+  }
+
+  .row-cars{
+    margin: 2.6rem
+  }
+
+  .navigation{
+    position: relative;
+    bottom: -3rem;
+  } 
 }
